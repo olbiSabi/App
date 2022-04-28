@@ -1,0 +1,11 @@
+https://docs.python.org/fr/3/library/tkinter.html
+
+https://www.geeksforgeeks.org/file-explorer-in-python-using-tkinter/
+
+https://apcpedagogie.com/une-application-tkinter-avec-une-classe/
+
+
+http://tkinter.fdex.eu/doc/entw.html
+http://tkinter.fdex.eu/doc/entw.html
+
+
