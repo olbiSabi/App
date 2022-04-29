@@ -9,6 +9,7 @@ Folder_Output=''
 firstFile=''
 secondFile=''
 thirdFile=''
+separateur=''
 #===================================================================================
 #                         FONCTIONS POUR OUVRIRE UN FICHIER
 #===================================================================================
@@ -37,13 +38,25 @@ def browseFiles(Btn):
     Btn.insert(0, filename)
     File_Entre = Btn.get()
 
-def valideFile(Champ1, Champ2, Champ3):
+def valideFile(Champ1, Champ2, Champ3, Btn):
     global firstFile
     global secondFile
     global thirdFile
+    global separateur
     firstFile = Champ1.get()
     secondFile = Champ2.get()
     thirdFile = Champ3.get()
-    Btn.configure(text=""+firstFile +secondFile +thirdFile)
+    Btn.configure(text=separateur)
 
-
+def print_selection(label, v1, v2, v3):
+    if (v1.get() == 1) & (v2.get() == 0)  & (v3.get() == 0):
+        separateur = ';'
+        label.configure(text='Séparateur: ( '+separateur+' )')
+    elif (v1.get() == 0) & (v2.get() == 1) & (v3.get() == 0):
+        separateur = ','
+        label.configure(text='Séparateur: ( '+separateur+' )')
+    elif (v1.get() == 0) & (v2.get() == 0) & (v3.get() == 1):
+        separateur = '|'
+        label.configure(text='Séparateur: ( '+separateur+' )')
+    else:
+        label.configure(text='Choisisez un seul')
